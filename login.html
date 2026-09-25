@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in | AURA</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+
+  <body>
+    <nav class="nav">
+      <div class="container nav-inner">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">A</span>
+          <span>AURA</span>
+        </a>
+      </div>
+    </nav>
+
+    <main class="section">
+      <div class="container login-layout">
+        <div class="dashboard login-panel">
+          <span class="page-tag">AURA / STUDENT ACCESS</span>
+          <h1>Welcome back.</h1>
+          <p class="login-copy">
+            Enter an email address invited to AURA. We will send you a one-time
+            sign-in link. No password needed.
+          </p>
+
+          <form class="auth-form" id="login-form">
+            <label for="login-email">School email</label>
+            <input
+              id="login-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="you@school.edu"
+              required
+            />
+            <button class="btn primary" type="submit" disabled>
+              Send sign-in link
+            </button>
+            <p
+              class="auth-message"
+              id="auth-message"
+              role="status"
+              aria-live="polite"
+            >
+              Only accounts added by the AURA administrator can sign in.
+            </p>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-logo">AURA</div>
+          <div class="footer-small">
+            Your School. Your Community. Your Future.
+          </div>
+        </div>
+        <div class="unidavi-badge">
+          <img src="assets/logo-unidavi.png" alt="UNIDAVI logo" />
+          <span>UNIDAVI</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/supabase-config.js"></script>
+    <script src="assets/auth.js"></script>
+    <script src="assets/script.js"></script>
+  </body>
+</html>
