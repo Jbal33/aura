@@ -35,17 +35,13 @@ const aiInput = document.getElementById("ai-input");
 
 const getAiReply = (prompt) => {
   const text = prompt.toLowerCase().trim();
+  const words = text.split(/[^a-z0-9áéíóúâêôãõç]+/i).filter(Boolean);
 
   if (!text) {
     return "Hello! How can I help?";
   }
 
-  if (
-    text.includes("oi") ||
-    text.includes("olá") ||
-    text.includes("hello") ||
-    text.includes("hi")
-  ) {
+  if (words.some((word) => ["oi", "olá", "hello", "hi"].includes(word))) {
     return "Hello! How are you? I can help with simple and quick questions.";
   }
 
