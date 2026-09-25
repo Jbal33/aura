@@ -20,11 +20,11 @@
     <main class="section">
       <div class="container login-layout">
         <div class="dashboard login-panel">
-          <span class="page-tag">AURA / STUDENT ACCESS</span>
+          <span class="page-tag">AURA / DEMO ACCESS</span>
           <h1>Welcome back.</h1>
           <p class="login-copy">
-            Enter an email address invited to AURA. We will send you a one-time
-            sign-in link. No password needed.
+            Enter an email ending in @unidavi.edu.br. This demo checks the
+            address format only. It does not verify ownership or send an email.
           </p>
 
           <form class="auth-form" id="login-form">
@@ -34,19 +34,17 @@
               name="email"
               type="email"
               autocomplete="email"
-              placeholder="you@school.edu"
+              placeholder="name@unidavi.edu.br"
               required
             />
-            <button class="btn primary" type="submit" disabled>
-              Send sign-in link
-            </button>
+            <button class="btn primary" type="submit">Enter AURA demo</button>
             <p
               class="auth-message"
               id="auth-message"
               role="status"
               aria-live="polite"
             >
-              Only accounts added by the AURA administrator can sign in.
+              Demo access only. No email verification is performed.
             </p>
           </form>
         </div>
@@ -68,7 +66,6 @@
       </div>
     </footer>
 
-    <script src="assets/supabase-config.js"></script>
     <script src="assets/auth.js"></script>
     <script src="assets/script.js"></script>
   </body>
