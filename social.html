@@ -39,71 +39,434 @@
       </div>
     </nav>
 
-    <section class="section">
-      <div class="container">
-        <div class="page-hero">
-          <span class="page-tag"> AURA / SOCIAL </span>
+    <main class="social-app">
+      <div class="container social-container">
+        <header class="social-app-heading">
+          <div>
+            <span class="page-tag">AURA / SOCIAL</span>
+            <h1>AURA Social</h1>
+            <p>Your school's moments, shared in one place.</p>
+          </div>
+          <span class="social-demo-pill">DEMO COMMUNITY</span>
+        </header>
 
-          <h1>
-            School life,<br />
+        <section class="social-stories" aria-labelledby="stories-heading">
+          <div class="social-stories-heading">
+            <h2 id="stories-heading">Stories</h2>
+            <span>Tap a profile to view</span>
+          </div>
 
-            together.
-          </h1>
+          <div class="social-stories-list">
+            <button
+              class="social-story"
+              type="button"
+              data-story-name="Ana Clara Souza"
+              data-story-text="Science fair setup is underway! Our team is putting the final pieces together."
+              aria-label="View Ana Clara Souza's story"
+            >
+              <span class="social-story-ring"
+                ><span class="social-avatar avatar-coral">AS</span></span
+              >
+              <span>Ana Clara</span>
+            </button>
+            <button
+              class="social-story"
+              type="button"
+              data-story-name="Pedro Henrique Lima"
+              data-story-text="Futsal practice after class today. Come cheer for your class!"
+              aria-label="View Pedro Henrique Lima's story"
+            >
+              <span class="social-story-ring"
+                ><span class="social-avatar avatar-teal">PH</span></span
+              >
+              <span>Pedro H.</span>
+            </button>
+            <button
+              class="social-story"
+              type="button"
+              data-story-name="Beatriz Oliveira"
+              data-story-text="Found a new favorite book at the library swap shelf."
+              aria-label="View Beatriz Oliveira's story"
+            >
+              <span class="social-story-ring"
+                ><span class="social-avatar avatar-gold">BO</span></span
+              >
+              <span>Beatriz</span>
+            </button>
+            <button
+              class="social-story"
+              type="button"
+              data-story-name="Lucas Ferreira"
+              data-story-text="Our robotics club is meeting in room 12 this Thursday."
+              aria-label="View Lucas Ferreira's story"
+            >
+              <span class="social-story-ring"
+                ><span class="social-avatar avatar-blue">LF</span></span
+              >
+              <span>Lucas</span>
+            </button>
+          </div>
+        </section>
 
-          <p>
-            A private, school-verified social space for sharing projects,
-            achievements, events and community moments.
-          </p>
+        <div class="social-layout">
+          <div class="social-main-column">
+            <form class="social-composer" id="social-post-form">
+              <span class="social-avatar avatar-demo" aria-hidden="true"
+                >ME</span
+              >
+              <label class="visually-hidden" for="social-post-text"
+                >Write a demo post</label
+              >
+              <textarea
+                id="social-post-text"
+                name="post"
+                rows="2"
+                maxlength="280"
+                placeholder="Share a school moment..."
+                required
+              ></textarea>
+              <button
+                type="submit"
+                aria-label="Publish demo post"
+                title="Publish demo post"
+              >
+                Post
+              </button>
+            </form>
+
+            <section class="social-feed" aria-label="Community feed">
+              <article class="social-post">
+                <div class="social-post-header">
+                  <span class="social-avatar avatar-coral" aria-hidden="true"
+                    >AS</span
+                  >
+                  <div class="social-author">
+                    <strong>Ana Clara Souza</strong>
+                    <span>Class 2B · 12 min ago</span>
+                  </div>
+                  <span class="social-more" aria-hidden="true">•••</span>
+                </div>
+                <img
+                  class="social-post-image"
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&amp;fit=crop&amp;w=1100&amp;q=82"
+                  alt="Students collaborating around a table on a school project"
+                  loading="lazy"
+                />
+                <div class="social-post-body">
+                  <div class="social-post-actions">
+                    <button
+                      class="social-icon-button social-like"
+                      type="button"
+                      aria-label="Like Ana Clara's post"
+                      aria-pressed="false"
+                      title="Like"
+                    >
+                      <span aria-hidden="true">♡</span>
+                    </button>
+                    <button
+                      class="social-icon-button social-comment-focus"
+                      type="button"
+                      aria-label="Comment on Ana Clara's post"
+                      title="Comment"
+                    >
+                      <span aria-hidden="true">◯</span>
+                    </button>
+                    <button
+                      class="social-icon-button social-save"
+                      type="button"
+                      aria-label="Save Ana Clara's post"
+                      aria-pressed="false"
+                      title="Save post"
+                    >
+                      <span aria-hidden="true">▱</span>
+                    </button>
+                  </div>
+                  <p class="social-likes">
+                    <strong><span data-like-count>18</span> likes</strong>
+                  </p>
+                  <p class="social-caption">
+                    <strong>Ana Clara Souza</strong> Our group finished the
+                    model for the science fair! We tested how different
+                    materials affect heat. Can't wait to present it on Friday.
+                    <span class="social-hashtag">#ScienceFair #Class2B</span>
+                  </p>
+                  <span class="social-comment-count">1 comment</span>
+                  <div class="social-comments" aria-live="polite">
+                    <p class="social-comment">
+                      <strong>Lucas Ferreira</strong> This looks awesome. Good
+                      luck!
+                    </p>
+                  </div>
+                  <form class="social-comment-form">
+                    <label class="visually-hidden" for="comment-ana"
+                      >Comment on Ana Clara's post</label
+                    >
+                    <input
+                      id="comment-ana"
+                      name="comment"
+                      type="text"
+                      placeholder="Add a comment..."
+                      maxlength="240"
+                      required
+                    />
+                    <button type="submit">Post</button>
+                  </form>
+                  <span class="social-post-time">12 MINUTES AGO</span>
+                </div>
+              </article>
+
+              <article class="social-post">
+                <div class="social-post-header">
+                  <span class="social-avatar avatar-teal" aria-hidden="true"
+                    >PH</span
+                  >
+                  <div class="social-author">
+                    <strong>Pedro Henrique Lima</strong>
+                    <span>Futsal Club · 1 hr ago</span>
+                  </div>
+                  <span class="social-more" aria-hidden="true">•••</span>
+                </div>
+                <img
+                  class="social-post-image"
+                  src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&amp;fit=crop&amp;w=1100&amp;q=82"
+                  alt="Students playing a friendly soccer match on a field"
+                  loading="lazy"
+                />
+                <div class="social-post-body">
+                  <div class="social-post-actions">
+                    <button
+                      class="social-icon-button social-like"
+                      type="button"
+                      aria-label="Like Pedro's post"
+                      aria-pressed="false"
+                      title="Like"
+                    >
+                      <span aria-hidden="true">♡</span>
+                    </button>
+                    <button
+                      class="social-icon-button social-comment-focus"
+                      type="button"
+                      aria-label="Comment on Pedro's post"
+                      title="Comment"
+                    >
+                      <span aria-hidden="true">◯</span>
+                    </button>
+                    <button
+                      class="social-icon-button social-save"
+                      type="button"
+                      aria-label="Save Pedro's post"
+                      aria-pressed="false"
+                      title="Save post"
+                    >
+                      <span aria-hidden="true">▱</span>
+                    </button>
+                  </div>
+                  <p class="social-likes">
+                    <strong><span data-like-count>24</span> likes</strong>
+                  </p>
+                  <p class="social-caption">
+                    <strong>Pedro Henrique Lima</strong> Friendly futsal match
+                    this Wednesday after class. Beginners are welcome too. Meet
+                    us at the school court at 4:30 PM!
+                    <span class="social-hashtag"
+                      >#FutsalClub #EveryoneWelcome</span
+                    >
+                  </p>
+                  <span class="social-comment-count">2 comments</span>
+                  <div class="social-comments" aria-live="polite">
+                    <p class="social-comment">
+                      <strong>Mariana Costa</strong> I'll be there!
+                    </p>
+                    <p class="social-comment">
+                      <strong>Rafael Martins</strong> Is there a sign-up list?
+                    </p>
+                  </div>
+                  <form class="social-comment-form">
+                    <label class="visually-hidden" for="comment-pedro"
+                      >Comment on Pedro's post</label
+                    >
+                    <input
+                      id="comment-pedro"
+                      name="comment"
+                      type="text"
+                      placeholder="Add a comment..."
+                      maxlength="240"
+                      required
+                    />
+                    <button type="submit">Post</button>
+                  </form>
+                  <span class="social-post-time">1 HOUR AGO</span>
+                </div>
+              </article>
+
+              <article class="social-post">
+                <div class="social-post-header">
+                  <span class="social-avatar avatar-gold" aria-hidden="true"
+                    >BO</span
+                  >
+                  <div class="social-author">
+                    <strong>Beatriz Oliveira</strong>
+                    <span>Class 1A · Yesterday</span>
+                  </div>
+                  <span class="social-more" aria-hidden="true">•••</span>
+                </div>
+                <img
+                  class="social-post-image"
+                  src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&amp;fit=crop&amp;w=1100&amp;q=82"
+                  alt="Shelves of books in a school library"
+                  loading="lazy"
+                />
+                <div class="social-post-body">
+                  <div class="social-post-actions">
+                    <button
+                      class="social-icon-button social-like"
+                      type="button"
+                      aria-label="Like Beatriz's post"
+                      aria-pressed="false"
+                      title="Like"
+                    >
+                      <span aria-hidden="true">♡</span>
+                    </button>
+                    <button
+                      class="social-icon-button social-comment-focus"
+                      type="button"
+                      aria-label="Comment on Beatriz's post"
+                      title="Comment"
+                    >
+                      <span aria-hidden="true">◯</span>
+                    </button>
+                    <button
+                      class="social-icon-button social-save"
+                      type="button"
+                      aria-label="Save Beatriz's post"
+                      aria-pressed="false"
+                      title="Save post"
+                    >
+                      <span aria-hidden="true">▱</span>
+                    </button>
+                  </div>
+                  <p class="social-likes">
+                    <strong><span data-like-count>31</span> likes</strong>
+                  </p>
+                  <p class="social-caption">
+                    <strong>Beatriz Oliveira</strong> The book-swap shelf is
+                    ready in the library. Bring a book you've enjoyed and find
+                    your next read. Everyone can join!
+                    <span class="social-hashtag">#BookSwap #ReadTogether</span>
+                  </p>
+                  <span class="social-comment-count">0 comments</span>
+                  <div class="social-comments" aria-live="polite"></div>
+                  <form class="social-comment-form">
+                    <label class="visually-hidden" for="comment-beatriz"
+                      >Comment on Beatriz's post</label
+                    >
+                    <input
+                      id="comment-beatriz"
+                      name="comment"
+                      type="text"
+                      placeholder="Add a comment..."
+                      maxlength="240"
+                      required
+                    />
+                    <button type="submit">Post</button>
+                  </form>
+                  <span class="social-post-time">YESTERDAY</span>
+                </div>
+              </article>
+            </section>
+          </div>
+
+          <aside class="social-sidebar">
+            <div class="social-profile-summary">
+              <span class="social-avatar avatar-demo" aria-hidden="true"
+                >ME</span
+              >
+              <div>
+                <strong>Your demo profile</strong><span>Student community</span>
+              </div>
+            </div>
+
+            <div class="social-suggestions">
+              <div class="social-sidebar-heading">
+                <strong>Suggestions for you</strong><span>DEMO</span>
+              </div>
+              <div class="social-suggestion">
+                <span class="social-avatar avatar-blue" aria-hidden="true"
+                  >LF</span
+                >
+                <div>
+                  <strong>Lucas Ferreira</strong><span>Robotics Club</span>
+                </div>
+                <button
+                  class="social-follow"
+                  type="button"
+                  aria-pressed="false"
+                >
+                  Follow
+                </button>
+              </div>
+              <div class="social-suggestion">
+                <span class="social-avatar avatar-violet" aria-hidden="true"
+                  >MC</span
+                >
+                <div>
+                  <strong>Mariana Costa</strong><span>Literature Club</span>
+                </div>
+                <button
+                  class="social-follow"
+                  type="button"
+                  aria-pressed="false"
+                >
+                  Follow
+                </button>
+              </div>
+              <div class="social-suggestion">
+                <span class="social-avatar avatar-green" aria-hidden="true"
+                  >RM</span
+                >
+                <div><strong>Rafael Martins</strong><span>Class 3A</span></div>
+                <button
+                  class="social-follow"
+                  type="button"
+                  aria-pressed="false"
+                >
+                  Follow
+                </button>
+              </div>
+            </div>
+
+            <div class="social-sidebar-footer">
+              About · Community guidelines · Privacy<br />AURA Social · School
+              project demo
+            </div>
+          </aside>
         </div>
 
-        <div class="grid-2">
-          <div class="card">
-            <span class="card-number"> FEED / 01 </span>
-
-            <h3>Project Showcase</h3>
-
-            <p>
-              Students can publish school projects, creative work and
-              collaborative results.
-            </p>
-          </div>
-
-          <div class="card">
-            <span class="card-number"> FEED / 02 </span>
-
-            <h3>Community Updates</h3>
-
-            <p>
-              Clubs, teams and school groups can share activities, invitations
-              and achievements.
-            </p>
-          </div>
-
-          <div class="card">
-            <span class="card-number"> FEED / 03 </span>
-
-            <h3>School Events</h3>
-
-            <p>Discover what's happening around your school community.</p>
-          </div>
-
-          <div class="card">
-            <span class="card-number"> FEED / 04 </span>
-
-            <h3>Verified Community</h3>
-
-            <p>
-              The concept is built around school accounts rather than an open
-              public network.
-            </p>
-          </div>
-        </div>
-
-        <div class="logo-strip">
-          <img src="assets/aura-social.jpg" alt="AURA Social" />
-        </div>
+        <p class="social-demo-note">
+          DEMO ONLY · All profiles and posts are fictional. Likes, follows and
+          comments are temporary and reset when you refresh.
+        </p>
       </div>
-    </section>
+    </main>
+
+    <dialog
+      class="social-story-dialog"
+      id="social-story-dialog"
+      aria-labelledby="story-dialog-name"
+    >
+      <form method="dialog">
+        <button
+          class="social-story-close"
+          type="submit"
+          aria-label="Close story"
+        >
+          ×
+        </button>
+      </form>
+      <div class="social-story-progress"><span></span></div>
+      <p class="social-story-viewer" id="story-dialog-name"></p>
+      <p class="social-story-viewer-copy" id="story-dialog-copy"></p>
+    </dialog>
 
     <footer>
       <div class="container footer-grid">
@@ -128,5 +491,6 @@
 
     <script src="assets/auth.js"></script>
     <script src="assets/script.js"></script>
+    <script src="assets/social.js"></script>
   </body>
 </html>
