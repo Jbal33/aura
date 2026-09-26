@@ -207,6 +207,16 @@ img {
   margin-bottom: 18px;
 }
 
+.hero-greeting {
+  margin: 0 0 14px;
+
+  color: var(--silver);
+
+  font-size: 15px;
+
+  font-weight: 600;
+}
+
 h1,
 h2,
 h3 {

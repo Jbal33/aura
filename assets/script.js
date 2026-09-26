@@ -284,7 +284,9 @@ const getAiReply = (prompt) => {
   }
 
   if (
-    words.some((word) => ["bye", "goodbye", "tchau", "adeus"].includes(word))
+    words.some((word) =>
+      ["bye", "goodbye", "tchau", "adeus", "até"].includes(word),
+    )
   ) {
     return "Goodbye! Good luck with your studies.";
   }
