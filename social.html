@@ -123,15 +123,75 @@
                 rows="2"
                 maxlength="280"
                 placeholder="Share a school moment..."
-                required
               ></textarea>
-              <button
-                type="submit"
-                aria-label="Publish demo post"
-                title="Publish demo post"
-              >
-                Post
-              </button>
+              <input
+                class="visually-hidden"
+                id="social-profile-image-input"
+                type="file"
+                accept="image/*"
+                aria-label="Choose a profile photo from your gallery"
+              />
+              <div class="social-composer-toolbar">
+                <label
+                  class="social-photo-picker"
+                  for="social-profile-image-input"
+                >
+                  <span aria-hidden="true">◉</span> Profile photo
+                </label>
+                <label
+                  class="social-photo-picker"
+                  for="social-post-image-input"
+                >
+                  <span aria-hidden="true">▧</span> Add photo
+                </label>
+                <input
+                  class="visually-hidden"
+                  id="social-post-image-input"
+                  name="photo"
+                  type="file"
+                  accept="image/*"
+                />
+                <button
+                  class="social-remove-profile-photo"
+                  id="remove-profile-photo"
+                  type="button"
+                  hidden
+                >
+                  Remove profile photo
+                </button>
+                <button
+                  type="submit"
+                  aria-label="Publish demo post"
+                  title="Publish demo post"
+                >
+                  Post
+                </button>
+              </div>
+              <div class="social-photo-preview" id="social-post-preview" hidden>
+                <img
+                  id="social-post-preview-image"
+                  alt="Selected post photo preview"
+                />
+                <button
+                  class="social-remove-photo"
+                  id="remove-post-photo"
+                  type="button"
+                >
+                  Remove photo
+                </button>
+              </div>
+              <p
+                class="social-upload-status"
+                id="profile-photo-status"
+                role="status"
+                aria-live="polite"
+              ></p>
+              <p
+                class="social-upload-status"
+                id="post-photo-status"
+                role="status"
+                aria-live="polite"
+              ></p>
             </form>
 
             <section class="social-feed" aria-label="Community feed">
@@ -144,7 +204,6 @@
                     <strong>Ana Clara Souza</strong>
                     <span>Class 2B · 12 min ago</span>
                   </div>
-                  <span class="social-more" aria-hidden="true">•••</span>
                 </div>
                 <img
                   class="social-post-image"
@@ -224,7 +283,6 @@
                     <strong>Pedro Henrique Lima</strong>
                     <span>Futsal Club · 1 hr ago</span>
                   </div>
-                  <span class="social-more" aria-hidden="true">•••</span>
                 </div>
                 <img
                   class="social-post-image"
@@ -308,7 +366,6 @@
                     <strong>Beatriz Oliveira</strong>
                     <span>Class 1A · Yesterday</span>
                   </div>
-                  <span class="social-more" aria-hidden="true">•••</span>
                 </div>
                 <img
                   class="social-post-image"
@@ -378,11 +435,19 @@
 
           <aside class="social-sidebar">
             <div class="social-profile-summary">
-              <span class="social-avatar avatar-demo" aria-hidden="true"
+              <span
+                class="social-avatar avatar-demo"
+                id="demo-profile-avatar"
+                aria-hidden="true"
                 >ME</span
               >
               <div>
                 <strong>Your demo profile</strong><span>Student community</span>
+                <label
+                  class="social-edit-profile-photo"
+                  for="social-profile-image-input"
+                  >Edit profile photo</label
+                >
               </div>
             </div>
 
@@ -443,8 +508,9 @@
         </div>
 
         <p class="social-demo-note">
-          DEMO ONLY · All profiles and posts are fictional. Likes, follows and
-          comments are temporary and reset when you refresh.
+          DEMO ONLY · Profiles and starter posts are fictional. You can delete
+          only posts you create and comments you add. Demo changes reset when
+          you refresh.
         </p>
       </div>
     </main>
